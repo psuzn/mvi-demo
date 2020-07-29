@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    app:startDestination="@id/nav_notes">
+
+    <include app:graph="@navigation/auth" />
+
+    <action
+        android:id="@+id/action_to_auth"
+        app:destination="@id/auth" />
+
+    <fragment
+        android:id="@+id/nav_notes"
+        android:name="me.sujanpoudel.mvidemo.ui.notes.NotesFragment" />
+
+</navigation>

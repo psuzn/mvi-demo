@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorBackground">#000</color>
+    <color name="colorLightBackground">#111111</color>
+
+    <color name="colorOnBackground">#FFF</color>
+    <color name="ColorOnBackgroundLight">#99FFFFFF</color>
+    <color name="ColorOnBackgroundLighter">#4DFFFFFF</color>
+
+    <color name="colorDivider">#1AFFFFFF</color>
+</resources>

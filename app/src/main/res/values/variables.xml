@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="windowLightStatusBar">true</bool>
+    <integer name="transitionDuration">300</integer>
+
+    <dimen name="margin_large">26dp</dimen>
+    <dimen name="margin_large_medium">20dp</dimen>
+    <dimen name="margin">16dp</dimen>
+    <dimen name="margin_sm">8dp</dimen>
+    <dimen name="margin_tiny">4dp</dimen>
+</resources>
