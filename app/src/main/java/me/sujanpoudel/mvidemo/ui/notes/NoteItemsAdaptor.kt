@@ -13,6 +13,7 @@ import me.sujanpoudel.mvidemo.databinding.ItemEmptyBinding
 import me.sujanpoudel.mvidemo.databinding.ItemHeaderBinding
 import me.sujanpoudel.mvidemo.databinding.ItemNoteBinding
 import me.sujanpoudel.mvidemo.helpers.layoutInflater
+import me.sujanpoudel.mvidemo.helpers.visible
 import javax.inject.Inject
 
 @FragmentScoped
@@ -66,12 +67,16 @@ class NoteHolder(
     fun bind(noteItem: NotesListItem.NoteItem) {
         binding.tvNoteTitle.text = if (noteItem.note.archived) HtmlCompat.fromHtml("<strike>${noteItem.note.title}</strike>", 0)
         else HtmlCompat.fromHtml(noteItem.note.title, 0)
+        binding.tvDescription.text = noteItem.note.description
         binding.cbDone.isEnabled = !noteItem.note.archived
         binding.cbDone.checkedChanges().skipInitialValue()
             .filter { (noteItem.note.completed && !it) || (!noteItem.note.completed && it) }
             .map { NotesUIAction.CompleteChanges(noteItem) }
             .subscribe(actionRelay)
         binding.cbDone.isChecked = noteItem.note.completed
+        binding.root.setOnClickListener {
+            binding.tvDescription.visible = !binding.tvDescription.visible
+        }
     }
 }
 
