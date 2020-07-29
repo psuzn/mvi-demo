@@ -9,8 +9,20 @@
         <item name="colorSecondaryVariant">@color/colorSecondary</item>
         <item name="colorOnSecondary">@color/colorOnPrimary</item>
 
+        <item name="colorSurface">@color/colorSurface</item>
+
         <item name="android:colorBackground">@color/colorBackground</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:windowLightStatusBar" tools:targetApi="m">@bool/windowLightStatusBar</item>
+    </style>
+
+    <style name="BottomSheet" parent="@style/Widget.Design.BottomSheet.Modal">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:background">@drawable/bg_bottom_sheet</item>
+    </style>
+
+    <style name="BaseBottomSheetDialog" parent="@style/Theme.MaterialComponents.BottomSheetDialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="bottomSheetStyle">@style/BottomSheet</item>
     </style>
 </resources>

@@ -13,6 +13,7 @@ import io.reactivex.subjects.PublishSubject
 import me.sujanpoudel.mvidemo.base.mvi.MviFragment
 import me.sujanpoudel.mvidemo.databinding.FragmentNotesBinding
 import me.sujanpoudel.mvidemo.helpers.visible
+import me.sujanpoudel.mvidemo.ui.newItem.NewNoteSheet
 import me.sujanpoudel.mvidemo.ui.notes.NotesUIAction.ArchiveChanges
 import me.sujanpoudel.mvidemo.ui.notes.NotesUIAction.InitialAction
 import javax.inject.Inject
@@ -55,6 +56,9 @@ class NotesFragment : MviFragment<NotesUIAction, NotesState>() {
             incAppbar.title.text = "Notes"
             rvNotes.adapter = adaptor
             ItemTouchHelper(simpleItemTouchCallback).attachToRecyclerView(rvNotes)
+            fbPlus.setOnClickListener {
+                NewNoteSheet().show(childFragmentManager, "new-note-sheet")
+            }
         }
     }
 
