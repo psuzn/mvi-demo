@@ -14,10 +14,13 @@ data class NotesState(
 
 sealed class NotesUIAction : Action() {
     object InitialAction : NotesUIAction(), InitAction
+    class CompleteChanges(val noteItem: NotesListItem.NoteItem):NotesUIAction()
+    class ArchiveChanges(val noteItem: NotesListItem.NoteItem):NotesUIAction()
 }
 
 sealed class NotesInternalAction : InternalAction() {
     class NotesResult(val notes: List<Note>) : NotesInternalAction()
+    class TmpRemove(val noteItem: NotesListItem.NoteItem) : NotesInternalAction()
 }
 
 sealed class NotesListItem {

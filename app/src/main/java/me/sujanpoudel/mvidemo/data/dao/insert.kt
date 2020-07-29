@@ -17,5 +17,5 @@ abstract class NoteDao {
     abstract fun getAll(): Observable<List<Note>>
 
     @Update(onConflict = OnConflictStrategy.REPLACE)
-    abstract fun update(note: Note)
+    abstract fun update(note: Note) :Completable
 }

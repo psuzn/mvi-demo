@@ -13,7 +13,7 @@ import me.sujanpoudel.mvidemo.helpers.into
 abstract class MviViewModel<A : Action, S : State, IA : InternalAction>(private val initialState: S) : ViewModel(),
     MviStore<A, S, IA> {
 
-    val disposeBag = CompositeDisposable()
+    private val disposeBag = CompositeDisposable()
     private val stateRelay: BehaviorSubject<S> by lazy { BehaviorSubject.createDefault(this.initialState) }
     private val actionRelay: PublishSubject<A> by lazy { PublishSubject.create<A>() }
 
