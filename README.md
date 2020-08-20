@@ -3,17 +3,16 @@
 Todo sample app built with MVI .
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-  <center>
-<img id="mode" width="200" src="./media/01.png" />
-<img id="mode" width="20" src="./media/02.png" />
-<br>
-</center>
+
+<img id="mode" width="200" src="./media/01.gif" /> &ensp;&ensp;
+<img width="200" src="./media/02.gif" />
+
 
 ## MVI Pattern
 <center>
 <img id="mode" src="./media/mvi.png" />
 <br>
-Fig. MVI in Nutshell ([image](https://medium.com/@thanh.bm/android-mvi-architecture-with-livedata-c72e9e1bd3e6))
+Fig. MVI in Nutshell [image](https://medium.com/@thanh.bm/android-mvi-architecture-with-livedata-c72e9e1bd3e6)
 </center>
 
 ## Single Event Management
